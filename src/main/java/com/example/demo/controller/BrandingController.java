@@ -27,6 +27,11 @@ public class BrandingController {
 		return brandingService.fetchConfigurationContent(appName, client);
 	}
 
+	@GetMapping("/style/{appName}/{client}")
+	String fetchStyle(@PathVariable String appName, @PathVariable String client) throws IOException {
+		return brandingService.fetchStyleContent(appName, client);
+	}
+
 	@GetMapping("/message/{appName}/{client}/{lang}")
 	String fetchMessageContent(@PathVariable String appName, @PathVariable String client, @PathVariable String lang)
 			throws IOException {
