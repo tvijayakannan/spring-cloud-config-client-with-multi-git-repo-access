@@ -1,0 +1,10 @@
+---
+applications:
+  - name: api-branding
+    instances: 1
+    memory: 512M
+    services:
+      - branding-configs
+    buildpack: java_buildpack
+    env:
+      SPRING_PROFILES_ACTIVE: dev
